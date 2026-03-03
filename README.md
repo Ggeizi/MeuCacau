@@ -1,44 +1,4 @@
 
-
-
-import java.util.Scanner;
-/*
-i. This class represents financing.
-ii. Ela deve conter três atributos: valorImovel (double), prazoFinanciamento (int) e taxaJurosAnual (double).
-iii. Deve conter pelo menos três métodos: um construtor para inicializar esses atributos, um
-método para calcular o pagamento mensal, e outro método para calcular o total do pagamento.
- */
-
-
-class Financiamento{
-    double valorImovel;
-    int prazoFinanciamento;
-    double taxaJurosAnual;
-    ///METODO FINANCIAMENTO
-    Financiamento(double valorDeImovel, int prazoFinanciamento, double taxaJurosAnual){
-        this.valorImovel = valorDeImovel;
-        this.prazoFinanciamento = prazoFinanciamento;
-        this.taxaJurosAnual = taxaJurosAnual;
-    }
-    ///1. Pagamento mensal = (valor do imóvel / (prazo do financiamento em anos * 12)) * (1 + (taxa anual / 12))
-    ///
-    double calculoPagamentoMensal (){
-        return (this.valorImovel/(this.prazoFinanciamento*12))*(1+(this.taxaJurosAnual/12));
-    }
-    ///2. Total do pagamento = pagamento mensal * prazo do financiamento em anos * 12
-    double calculoTotalDoPagamento (){
-        return this.calculoPagamentoMensal() * this.prazoFinanciamento * 12;
-    }
-}
-
-/*
-b. Classe InterfaceUsuario:
-
-i. Esta classe é responsável por lidar com a entrada de dados do usuário.
-Estes dados podem ser recebidos via entrada do usuário usando o Scanner.
- */
-
-class InterfaceUsuario {
     ///METODOS ENTRADA DE DADOS DO USUÁRIO
     /*
 1. Pedir ao usuário o valor do imóvel: Ela deve conter um método o
